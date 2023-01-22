@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 // BundleAnalyzer는 Bundle 최적화 용도로 보통 저는 사용합니다.
 
@@ -22,6 +23,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: "react",
     }),
+    new Dotenv(),
   ],
   resolve: {
     alias: {
